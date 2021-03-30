@@ -1,8 +1,10 @@
-import requests,json,time,pync
+import requests,json,time,winsound
 
 while True:
-  #add a list of store numbers near your zip code
-	stores=[]
+  #add a list of store numbers near your zip code as 
+	stores=["<####>","<####>","<####>"]
+  # number of times to beep if availability is found
+	numBeeps=100
 
 	for store in stores:
 		url = "https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber="+store
@@ -14,5 +16,7 @@ while True:
 			time.sleep(3)
 			continue
 		else:
-			pync.notify(store+' Has Shots', title = 'RITE AID')
+			print(store,' Has Shots')
+			for x in range(0, numBeeps):
+				winsound.Beep(650, 250)
 			continue
