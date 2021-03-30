@@ -2,10 +2,13 @@ import requests,json,time,winsound,datetime
 
 while True:
   #add a list of store numbers near your zip code as 
-	stores=["###","####","####"]
+	stores=["####","####","####"]
   # number of times to beep if availability is found
 	numBeeps=100
+  # enable output for each attempt
 	enableOutput=True
+  # number of seconds to sleep before checking all the stores again
+	sleepTimer=30
 
 	for store in stores:
 		if enableOutput==True:
@@ -21,13 +24,14 @@ while True:
 				if enableOutput==True:
 					print("No slots")
 				time.sleep(3)
-				continue
 			else:
-				print(store,' Has Shots!!!')
+				print(store,' Has Shots')
 				for x in range(0, numBeeps):
 					winsound.Beep(650, 250)
-				continue
 		else:
 			if enableOutput==True:
 				print("Error in response")
-			continue
+
+	if enableOutput==True:
+		print("Sleeping for",sleepTimer,"seconds . . .")
+	time.sleep(30)
