@@ -18,4 +18,4 @@ Tips:
 
 * I recommend signing up for first slot you get, you can always cancel it if you get another at a closer store later on.
 
-* THERE CAN BE FALSE POSITIVES.  Not sure why this happens, but it happened a few times throughout the day that their site said a slot was open, but when I tried to sign up in the browser, no slots were actually available. If its not near midnight, its probably a false positive.
+* THERE CAN BE FALSE POSITIVES.  Not sure why this happens, but it happened a few times throughout the day that their API said a slot was open, but when I tried to sign up in the browser, no slots were actually available. If its not near midnight, its probably a false positive.
