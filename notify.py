@@ -4,11 +4,11 @@ while True:
   #add a list of store numbers near your zip code as 
 	stores=["####","####","####"]
   # number of times to beep if availability is found
-	numBeeps=100
+	numBeeps=10
   # enable output for each attempt
 	enableOutput=True
   # number of seconds to sleep before checking all the stores again
-	sleepTimer=30
+	sleepTimer=15
 
 	for store in stores:
 		if enableOutput==True:
