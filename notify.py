@@ -34,4 +34,4 @@ while True:
 
 	if enableOutput==True:
 		print("Sleeping for",sleepTimer,"seconds . . .")
-	time.sleep(30)
+	time.sleep(sleepTimer)
